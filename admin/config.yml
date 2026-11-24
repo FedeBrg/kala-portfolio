@@ -9,10 +9,10 @@
 # ---------------------------------------------------------------------------
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME      # <-- REPLACE
+  repo: fedebrg/kala-portfolio      # <-- REPLACE
   branch: main
   base_url: https://api.netlify.com              # <-- Netlify OAuth helper
-  site_domain: YOUR-SITE.netlify.app             # <-- REPLACE (no https://)
+  site_domain: thriving-kheer-5e0b95.netlify.app             # <-- REPLACE (no https://)
   auth_endpoint: auth
   auth_scope: public_repo      # enough for a public repo (GitHub Pages on a free plan needs a public repo)
   commit_messages:
