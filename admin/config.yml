@@ -1,0 +1,78 @@
+# Decap CMS configuration for the portfolio.
+# ---------------------------------------------------------------------------
+# >>> REPLACE THE PLACEHOLDERS BELOW (see .setup.md, local only) <<<
+# Netlify OAuth (recommended):
+#   repo:        your GitHub "owner/repository", e.g. federico/kala-portfolio
+#   base_url:    https://api.netlify.com
+#   site_domain: your Netlify site hostname, e.g. something-random.netlify.app
+#   (auth_endpoint is unused with Netlify; safe to leave or remove)
+# ---------------------------------------------------------------------------
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME      # <-- REPLACE
+  branch: main
+  base_url: https://api.netlify.com              # <-- Netlify OAuth helper
+  site_domain: YOUR-SITE.netlify.app             # <-- REPLACE (no https://)
+  auth_endpoint: auth
+  auth_scope: public_repo      # enough for a public repo (GitHub Pages on a free plan needs a public repo)
+  commit_messages:
+    update: "Update {{collection}}: {{slug}}"
+    uploadMedia: "Upload image {{path}}"
+    deleteMedia: "Delete image {{path}}"
+
+# While testing on your own computer you can run `npx decap-server` and open
+# http://localhost:8000/admin/ to edit local files without logging in. Ignored on the live site.
+local_backend: true
+
+# Uploaded images are committed to this folder and stored in the data as "assets/projects/<file>".
+media_folder: assets/projects
+public_folder: assets/projects
+
+collections:
+  - name: projects
+    label: Projects
+    description: "The projects on the reel. Open 'All projects' to add, edit, delete or drag projects into order."
+    editor:
+      preview: false
+    files:
+      - name: all
+        label: All projects
+        file: content/projects.json
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            label_singular: Project
+            summary: "{{fields.title}}"
+            collapsed: true
+            add_to_top: false
+            hint: "Drag projects to change their order on the reel. The reel loops forever, so any number of projects works."
+            fields:
+              - { label: Title, name: title, widget: string, hint: "Shown as the big title on the landing page and in the lens." }
+              - { label: Description, name: description, widget: text }
+              - { label: Year, name: year, widget: string, required: false }
+              - { label: Discipline, name: discipline, widget: string, required: false, hint: "e.g. Branding, Illustration, Packaging" }
+              - { label: Tools, name: tools, widget: string, required: false, hint: "e.g. Figma, Illustrator, Procreate" }
+              - label: Images
+                name: images
+                widget: list
+                label_singular: Image
+                summary: "{{fields.caption}}"
+                min: 1
+                collapsed: false
+                hint: "Numbered in this order (drag to reorder). Images 1 and 2 appear on the landing reel. ALL images appear on the project's detail reel (8 per page; more pages appear automatically). Landscape images about 1600 px wide work best."
+                fields:
+                  - { label: Image, name: image, widget: image, choose_url: false }
+                  - { label: Caption, name: caption, widget: string, required: false, hint: "Optional short caption, printed on the detail reel and shown when the image is opened." }
+
+  - name: settings
+    label: Site settings
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Site settings
+        file: content/settings.json
+        fields:
+          - { label: Portfolio owner name, name: owner_name, widget: string, hint: "Printed on the reel, the labels and the browser tab." }
+          - { label: Site title, name: site_title, widget: string, required: false, default: "Portfolio", hint: "The title shown before a project is selected." }

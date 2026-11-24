@@ -1,0 +1,106 @@
+{
+  "projects": [
+    {
+      "title": "Lumen Atelier",
+      "year": "2024",
+      "discipline": "Branding",
+      "tools": "Figma, Adobe Illustrator, Glyphs",
+      "description": "A fictional typography house and stationery brand built around a circulating-light motif. The identity uses a custom wordmark, a modular monogram, and a paper system for sample packs, letterheads, and invoices.",
+      "images": [
+        {
+          "image": "assets/projects/lumen-atelier-01.jpg",
+          "caption": "Letterpress stationery"
+        },
+        {
+          "image": "assets/projects/lumen-atelier-02.jpg",
+          "caption": "Gold monogram stamp"
+        }
+      ]
+    },
+    {
+      "title": "Northward Transit",
+      "year": "2023",
+      "discipline": "Illustration",
+      "tools": "Procreate, Adobe Photoshop, Risograph",
+      "description": "A fictional city-transit poster series drawn in the style of mid-century travel illustration, inventing neighborhoods, line colors, and a night-service overlay. The set was imagined as a limited run of screen-printed sheets and a folding pocket map.",
+      "images": [
+        {
+          "image": "assets/projects/northward-transit-01.jpg",
+          "caption": "Transit poster, printed"
+        },
+        {
+          "image": "assets/projects/northward-transit-02.jpg",
+          "caption": "Invented neighborhoods"
+        }
+      ]
+    },
+    {
+      "title": "Harborline Banking",
+      "year": "2025",
+      "discipline": "UI",
+      "tools": "Figma, Principle, Maze",
+      "description": "A fictional mobile banking app for a coastal credit union, with a calm dashboard, bill-pay flows, and a card-control screen. The interface is built around large type, low-clutter account summaries, and a tide-inspired accent system.",
+      "images": [
+        {
+          "image": "assets/projects/harborline-banking-01.jpg",
+          "caption": "Coastal banking app"
+        },
+        {
+          "image": "assets/projects/harborline-banking-02.jpg",
+          "caption": "Calm dashboard"
+        }
+      ]
+    },
+    {
+      "title": "Vera Canning Co.",
+      "year": "2022",
+      "discipline": "Packaging",
+      "tools": "Adobe Illustrator, KeyShot, Adobe Dimension",
+      "description": "A fictional preserve and pickle line whose jars, sleeves, and shipping crates share a botanical stencil language. The system covers three seasonal SKUs, a gift crate, and a hanging shelf talker for market stalls.",
+      "images": [
+        {
+          "image": "assets/projects/vera-canning-01.jpg",
+          "caption": "Preserve & pickle line"
+        },
+        {
+          "image": "assets/projects/vera-canning-02.jpg",
+          "caption": "Botanical stencil labels"
+        }
+      ]
+    },
+    {
+      "title": "Paperorbit Quarterly",
+      "year": "2024",
+      "discipline": "Editorial",
+      "tools": "Adobe InDesign, Illustrator, Photoshop",
+      "description": "A fictional independent design journal whose typographic grid, orbit diagrams, and essay layouts were drawn as a four-issue pilot year. Each issue pairs long-form criticism with a folded poster and a contents ribbon.",
+      "images": [
+        {
+          "image": "assets/projects/paperorbit-quarterly-01.jpg",
+          "caption": "Independent journal"
+        },
+        {
+          "image": "assets/projects/paperorbit-quarterly-02.jpg",
+          "caption": "Typographic grid"
+        }
+      ]
+    },
+    {
+      "title": "Cedar Station",
+      "year": "2023",
+      "discipline": "Wayfinding",
+      "tools": "Adobe Illustrator, Cinema 4D, InDesign",
+      "description": "A fictional commuter-rail interchange whose sign family, platform totems, and pedestrian maps use a cedar-and-steel vocabulary. The program includes entrance marks, track blades, and a simplified system map for hanging kiosks.",
+      "images": [
+        {
+          "image": "assets/projects/cedar-station-01.jpg",
+          "caption": "Entrance totem"
+        },
+        {
+          "image": "assets/projects/cedar-station-02.jpg",
+          "caption": "Cedar and steel"
+        }
+      ]
+    }
+  ]
+}
